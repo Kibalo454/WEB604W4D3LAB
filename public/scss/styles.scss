@@ -1,0 +1,132 @@
+@import "variables";
+@import "colors";
+@import "nav";
+@import "form";
+
+/* ================================
+   GLOBAL
+=================================== */
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body {
+  font-family: $fontFamily1;
+  background: $backgroundColor1;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   HEADER + NAV BAR
+=================================== */
+header {
+  background: $backgroundColor1;
+  padding: 20px 0 0 0;
+}
+
+/* flex container for nav links + Register */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1350px;
+  margin: 0 auto;
+}
+
+/* left side menu */
+.nav-left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+}
+
+.nav-left li {
+  display: inline-block;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: $color4;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* right side (Register link) */
+.nav-right {
+  font-weight: bold;
+
+  a {
+    color: $color4;
+  }
+}
+
+/* ================================
+   MAIN CONTENT (HOME PAGE)
+=================================== */
+
+main {
+  background: $mainColor;
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+
+  #intro-image {
+    float: left;
+    width: 800px;
+
+    img {
+      width: 800px;
+    }
+  }
+
+  #intro-text {
+    width: 550px;
+    height: 407px;
+    float: left;
+    background: $sectionColor;
+    text-align: center;
+    padding-top: 8em;
+
+    h3 {
+      font-size: $fontSizeH3;
+      color: $color3;
+    }
+
+    span {
+      font-family: $fontFamily2;
+      font-size: 2em;
+    }
+  }
+}
+
+/* ================================
+   FOOTER
+=================================== */
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: $fontSizeSmall;
+}
+
+/* ================================
+   BUTTON BASE
+=================================== */
+button {
+  color: $color4;
+  width: 100px;
+  height: 40px;
+  background: $backgroundColor1;
+  margin-top: 2em;
+}
+
+.submit-buttton {
+  @extend button;
+  border: 1px solid $color3;
+}

@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  main.register-main
+    .register-wrapper
+      // LEFT GREY CARD
+      .register-card
+        span.brand Simple Kitchen
+        p.tagline
+          | Simple & Comforting
+          br
+          | Recipes All Year Round
+
+      // RIGHT FORM
+      .register-form
+        h3 Register to subscribe
+
+        if errors && errors.length
+          ul.errors
+            each err in errors
+              li= err.msg
+
+        // post back to same URL
+        form(method='post')
+          .form-row
+            label(for='name') Name:
+            input#name(type='text', name='name', value=(data && data.name) || '')
+
+          .form-row
+            label(for='email') Email:
+            input#email(type='email', name='email', value=(data && data.email) || '')
+
+          button.submit-buttton(type='submit') Register
